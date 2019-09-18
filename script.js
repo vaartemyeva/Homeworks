@@ -7,34 +7,30 @@ document.body.appendChild(div);
 var ul = document.createElement('ul');
 div.appendChild(ul);
     
-var btn1 = document.createElement('button');//создаём кнопку
-    btn1.style.margin = "10px"
-var textInBtn = document.createTextNode('Открыть список');//создаем текст для кнопки
-btn1.appendChild(textInBtn);//добавляем текст в кнопку
-document.body.appendChild(btn1);
+var btn = document.createElement('button');//создаём кнопку
+    btn.style.margin = "10px";
+    btn.innerHTML = 'Открыть список';
+document.body.appendChild(btn);
 
-var btn2 = document.createElement('button');
-    btn2.style.margin = "10px"
-var textInBtn = document.createTextNode('Скрыть список');
-btn2.appendChild(textInBtn);
-document.body.appendChild(btn2);
 
-btn1.onclick = function myFunction() {
+btn.onclick = function showMe() {
     div.style.height = "200px";
-    div.style.opacity = 1; 
-    div.style.transition = "all 0.5s ease-in";
+    div.style.transition = "height 0.5s ease-in";
+    btn.innerHTML = (btn.innerHTML === 'Открыть список') ? btn.innerHTML = 'Скрыть список' : btn.innerHTML = 'Открыть список';
 
     for(var i = 0, ln = heroes.length; i < ln; i++){
         var li = document.createElement('li');
         li.innerHTML = heroes[i];
         ul.appendChild(li);
     }
-}
+    btn.onclick = function hidList() {
+        div.style.overflow = "hidden";
+        div.style.height = "0px"; 
+        div.style.transition = "height 0.5s ease"; 
 
-btn2.onclick = function myFunction() {
-    div.style.height = "0px"; 
-    div.style.opacity = 0; 
-    div.style.transition = "height 0.5s ease"; 
+        ul.innerHTML = "";
+        btn.innerHTML = 'Открыть список';
+    }
 }
 
 // ---------ПЕРЕБОР МАССИВА--------//
@@ -58,3 +54,21 @@ numbers = numbers.map(function(par){
 console.log(numbers);
 console.log("Нечетных : " + sum1);
 console.log("Четных : " + sum2);
+console.log("");
+
+//--------2ой СПОСОБ---------//
+var num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+var count1 = 0;
+var count2 = 0;
+for(var i = 0, lg = num.length; i < lg; i++){
+    if(num[i] % 2 == 0){
+        count2++;
+        console.log("четное");
+    }
+    else{
+        count1++;
+        console.log("нечетное");
+    }
+}
+console.log("Нечетных : " + count1);
+console.log("Четных : " + count2);
