@@ -9,27 +9,41 @@ div.appendChild(ul);
     
 var btn = document.createElement('button');//создаём кнопку
     btn.style.margin = "10px";
-    btn.innerHTML = 'Открыть список';
 document.body.appendChild(btn);
+btn.innerHTML = 'Открыть список';
 
+var show = true;
 
-btn.onclick = function showMe() {
+function showList() {
     div.style.height = "200px";
     div.style.transition = "height 0.5s ease-in";
-    btn.innerHTML = (btn.innerHTML === 'Открыть список') ? btn.innerHTML = 'Скрыть список' : btn.innerHTML = 'Открыть список';
 
-    for(var i = 0, ln = heroes.length; i < ln; i++){
+    var ln = heroes.length;
+    for(var i = 0; i < ln; i++){
         var li = document.createElement('li');
         li.innerHTML = heroes[i];
         ul.appendChild(li);
     }
-    btn.onclick = function hidList() {
-        div.style.overflow = "hidden";
-        div.style.height = "0px"; 
-        div.style.transition = "height 0.5s ease"; 
+}
 
-        ul.innerHTML = "";
-        btn.innerHTML = 'Открыть список';
+function hideList() {
+    div.style.overflow = "hidden";
+    div.style.height = "0px"; 
+    div.style.transition = "height 0.5s ease"; 
+
+    ul.innerHTML = "";
+}
+
+btn.onclick = function (){
+    btn.innerHTML = (btn.innerHTML === 'Скрыть список') ? btn.innerHTML = 'Открыть список' : btn.innerHTML = 'Скрыть список';
+
+    if(show){
+        showList();
+        show = false;
+    }
+    else{
+        hideList();
+        show = true;
     }
 }
 
@@ -60,7 +74,8 @@ console.log("");
 var num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 var count1 = 0;
 var count2 = 0;
-for(var i = 0, lg = num.length; i < lg; i++){
+var lg = num.length;
+for(var i = 0; i < lg; i++){
     if(num[i] % 2 == 0){
         count2++;
         console.log("четное");
