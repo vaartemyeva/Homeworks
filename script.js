@@ -1,3 +1,60 @@
+//-------МАТЕМАТИЧЕСКИЙ ТРЕНАЖЕР------
+
+var button = document.querySelector("#btn");
+var sum = document.querySelector("#result");
+var num1 = document.querySelector("#number1");
+var num2 = document.querySelector("#number2");
+var show = true;
+
+
+function seeRes() {
+    sum.style.height = "30px";
+    sum.style.opacity = 1;
+    sum.style.transition = "all 0.5s ease-in";
+}
+
+function pureAll(){
+    sum.style.overflow = "hidden";
+    sum.style.height = "0px"; 
+    sum.style.opacity = 0;
+    sum.style.transition = "height 0.5s ease";
+    num1.value = "";
+    num2.value = "";
+}
+
+button.onclick = function res(){
+    button.innerHTML = (button.innerHTML === 'Результат умножения') ? button.innerHTML = 'Очистить' : button.innerHTML = 'Результат умножения';
+    
+    var first = Number(num1.value);
+    var second = Number(num2.value);
+    
+    if(show){
+        var result = first * second;
+        sum.innerHTML = result;
+        seeRes();
+        show = false;
+    }
+    else{
+        pureAll();
+        show = true;
+    }
+}
+
+//--------СМЕНА КАРТИНОК-------
+
+
+var images = document.querySelectorAll("#images > ul > li");
+console.log(images);
+images.forEach(function(item){
+    item.onmouseover = function(){
+        var area = document.querySelector("#main");
+        var pic = this.innerHTML;
+        area.innerHTML = pic;
+    }
+});
+    
+
+
 // ---------СПИСОК--------//
 
 var heroes = ['Joker', 'Batman', 'Silver Lady', 'Kutrapali', 'Rocky', 'Harley Quin', 'Superwoman', 'Tina Turner'];
@@ -8,11 +65,8 @@ var ul = document.createElement('ul');
 div.appendChild(ul);
     
 var btn = document.createElement('button');//создаём кнопку
-    btn.style.margin = "10px";
 document.body.appendChild(btn);
 btn.innerHTML = 'Открыть список';
-
-var show = true;
 
 function showList() {
     div.style.height = "200px";
@@ -49,7 +103,7 @@ btn.onclick = function (){
 
 // ---------ПЕРЕБОР МАССИВА--------//
 
-var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+/*var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 var sum1 = 0;
 var sum2 = 0;
 numbers = numbers.map(function(par){
@@ -86,4 +140,4 @@ for(var i = 0; i < lg; i++){
     }
 }
 console.log("Нечетных : " + count1);
-console.log("Четных : " + count2);
+console.log("Четных : " + count2);*/

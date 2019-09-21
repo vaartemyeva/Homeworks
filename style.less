@@ -24,14 +24,37 @@ html, body, div{
 @color_footer: #ddd;
 @owl_dot: #d5d8dc;
 
-button{
+div{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+#number1, #number2, #result{
+    height: 30px;
+    border-radius: 6px;
+    background-color: @light_salmon;
+    font-size: 16px;
+    color: @dark_grey;
+    border: 0;
+    padding: 2px 15px;
+}
+
+#result{
+    overflow: hidden;
+    height: 0px;
+    padding: 7px 15px 0; 
+    opacity: 0;
+}
+
+button, #btn{
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 16px;
     border-radius: 6px;
     background-color: @dark_grey;
     border: 1.3px solid @dark_grey;
     color: @white;
-    margin: 30px 10px 0 10px;
+    margin: 10px 15px ;
     padding: 10px 16px;
     transition: background-color .5s;
     
@@ -39,5 +62,38 @@ button{
         background-color: @orange;
         color: @dark_grey;
         text-shadow: none;
+    }
+}
+
+#main{
+    width: 600px;
+    height: 450px;
+
+    img{
+        width: 85%;
+        height: 430px;
+    }
+}
+
+#images{
+
+    margin: 10px;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        position: relative;
+        margin: 0px;
+        list-style-type: none;
+        padding: 5px;
+    }
+
+    img{
+        height: 100px;
+        cursor: pointer;
     }
 }
