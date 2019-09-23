@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/fe091cc005.js"></script>
 </head>
 <body>
     <div id="list"></div>
@@ -17,7 +18,7 @@
     </div>
     <button id="btn">Результат умножения</button>
     <div id="result"></div>
-    <div id="main"><img src="images/joker.jpg" alt=""></div>
+    <div id="main"><img src="images/joker.jpg" alt="" title="Lovely gay"></div>
     <div id = "images">
         <ul>
             <li><img src="images/joker.jpg" class="img" alt=""></li>
@@ -29,6 +30,20 @@
             <li><img src="images/superwoman.jpg" class="img" alt=""></li>
             <li><img src="images/tina_turner.jpg" class="img" alt=""></li>
         </ul>
+    </div>
+    <div class="box">
+        <form method="post" class="modal">
+            <div class="close"><i class="fa fa-times"></i></div>
+            <label for="login">Логин / Почта</label>
+            <input type="text" name="login" id="login" class="login" autocomplete="on">
+            <label for="password">Пароль</label>
+            <input type="password" name="password" id="psw">
+            <div class="eye"><i class="fa fa-eye"></i></div>
+            <div class="box_button">
+                <input type="submit" class="access" value="Войти">
+                <button id="btn_modal">Зарегистрироваться</button>
+            </div>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,11 +1,12 @@
-html, body, div{
+html, body{
 	margin:0;
 	padding: 0;
     font-size: 16px;
     line-height: 1.42857143;
-	font-family: 'Open Sans', sans-serif;
-
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
 }
+
 /*----COLOR-----*/
 @orange: #E87E04;
 @light_salmon: #FFDAB9;
@@ -47,14 +48,14 @@ div{
     opacity: 0;
 }
 
-button, #btn{
+.access, button, #btn{
     cursor: pointer;
     font-size: 16px;
     border-radius: 6px;
     background-color: @dark_grey;
     border: 1.3px solid @dark_grey;
     color: @white;
-    margin: 10px 15px ;
+    margin: 10px 15px;
     padding: 10px 16px;
     transition: background-color .5s;
     
@@ -96,4 +97,74 @@ button, #btn{
         height: 100px;
         cursor: pointer;
     }
+}
+#login, #psw{
+	display: inline;
+    border: 1px solid #c6c6c6;
+    border-radius: 8px;
+    height: 20px;
+    width: 380px;
+    padding: 8px;
+    margin-bottom: 8px;
+
+    &:hover{
+        background-color: #ffeb9a;
+    }
+}
+
+#btn_modal{
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: @white;
+    border: 1.3px solid @dark_grey;
+    color: @dark_grey;
+    padding: 10px 16px;
+    transition: background-color .5s;
+    
+    &:hover{
+        background-color: @orange;
+        color: @dark_grey;
+        text-shadow: none;
+    }
+}
+.box{
+    display: none;
+    width: 430px;
+    border: 1px solid @dark_grey;
+    border-radius: 6px;
+    padding: 20px;
+    background-color: @light_salmon;
+    position: fixed;
+    top: 15%;
+    left: 30%;
+}
+form{
+    padding-left: 8px;
+}
+.box_button{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+
+    .access, #btn_modal{
+        margin: 0 -3px 0 10px;
+    }
+}
+i{
+    cursor: pointer;
+}
+.eye{  
+    display: inline-block;
+    width: 16px;
+    margin: 0px;
+}
+.close{
+    width: 405px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 0px;
 }

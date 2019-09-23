@@ -7,7 +7,7 @@ var num2 = document.querySelector("#number2");
 var show = true;
 
 
-function seeRes() {
+function showRes() {
     sum.style.height = "30px";
     sum.style.opacity = 1;
     sum.style.transition = "all 0.5s ease-in";
@@ -27,14 +27,18 @@ button.onclick = function res(){
     
     var first = Number(num1.value);
     var second = Number(num2.value);
-    
+
+    if(isNaN(first) || isNaN(second)){
+        alert("Введите корректно значение");
+        show = false;
+        button.innerHTML = 'Результат умножения';
+    }
     if(show){
         var result = first * second;
         sum.innerHTML = result;
-        seeRes();
+        showRes();
         show = false;
-    }
-    else{
+    }else{
         pureAll();
         show = true;
     }
@@ -52,8 +56,31 @@ images.forEach(function(item){
         area.innerHTML = pic;
     }
 });
-    
 
+//------МОДАЛЬНОЕ ОКНО-----
+var box = document.querySelector(".box");
+window.onload = function() {
+    var delay_box = 2000;
+	setTimeout("box.style.display = 'flex'", delay_box);
+}
+
+var close = document.querySelector(".close");
+
+close.onclick = function (){
+    box.style.display = "none";
+}
+
+var eye = document.querySelector(".eye");
+
+eye.onmousedown = function () {
+    var psw = document.querySelector("#psw");
+    psw.setAttribute('type', 'text');
+}
+
+eye.onmouseup = function () {
+    var psw = document.querySelector("#psw");
+    psw.setAttribute('type', 'password');
+}
 
 // ---------СПИСОК--------//
 
@@ -141,3 +168,14 @@ for(var i = 0; i < lg; i++){
 }
 console.log("Нечетных : " + count1);
 console.log("Четных : " + count2);*/
+
+//http://jquery.page2page.ru/index.php5/%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F
+
+
+
+$('#btn').on('dblclick', function (params) {
+    $('#area > ul > li').css({
+        color: "red",
+        backgroundColor: "yellow"
+    });
+});
