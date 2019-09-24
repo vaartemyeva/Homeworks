@@ -69,8 +69,17 @@ var close = document.querySelector(".close");
 close.onclick = function (){
     box.style.display = "none";
 }
-
+var str = document.querySelector("#psw");
 var eye = document.querySelector(".eye");
+
+str.oninput = function(){
+    var slg = str.value.length;
+    if(slg != 0){
+        eye.style.display = "inline-block";
+    }else{
+        eye.style.display = "none";
+    }
+}
 
 eye.onmousedown = function () {
     var psw = document.querySelector("#psw");
