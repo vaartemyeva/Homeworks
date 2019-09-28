@@ -1,0 +1,285 @@
+<<<<<<< HEAD
+html, body, div{
+	margin:0;
+	padding: 0;
+    font-size: 16px;
+    line-height: 1.42857143;
+	font-family: 'Open Sans', sans-serif;
+
+}
+/*----COLOR-----*/
+@orange: #E87E04;
+@light_salmon: #FFDAB9;
+@white: #fff;
+@dark_grey: #2c3e50;
+@grey: #616e7c;
+@grey_shadow: #555;
+@main_links_hover: #fdc99b;
+@color_btn_about: #76818d;
+@color_circle_percent: #474d5d;
+@color_contact: #f4f5f6;
+@gradient_experience: #f4f5f6;
+@color_timeline_figure: #eee;
+@color_counter: #415161;
+@bgcolor_textarea: rgba(255,255,255,0.8);
+@color_footer: #ddd;
+@owl_dot: #d5d8dc;
+
+button{
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 6px;
+    background-color: @dark_grey;
+    border: 1.3px solid @dark_grey;
+    color: @white;
+    margin: 30px 10px 0 10px;
+    padding: 10px 16px;
+    transition: background-color .5s;
+    
+    &:hover{
+        background-color: @orange;
+        color: @dark_grey;
+        text-shadow: none;
+=======
+html, body{
+	margin:0;
+	padding: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+/*----COLOR-----*/
+@grey:#e2e2e2;
+@pink: #f1aba9;
+@orange: #ceae55;
+@dark_grey: #30304a;
+@white: #fff;
+@border: #f7eeee;
+@blue: #0fcfda;
+@text: #999999;
+@shadow: #a8a8a8;
+
+//---------ПУСТОЙ САЙТ С КНОПКАМИ и ЛОГО--------
+.mainWindow{
+    margin: 15px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .mainWindow__logo{
+        cursor: pointer; 
+    }
+
+    .mainWindow__button button{
+        cursor: pointer;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-radius: 12px;
+        background-color: @white;
+        border: 1.3px solid @pink;
+        color: @pink;
+        margin: 10px 5px;
+        padding: 5px 16px;
+        transition: background-color .5s;
+    
+        &:hover{
+            color: @text;
+        }
+    }
+}
+
+//---------МОДАЛЬНОЕ ОКНО--------
+
+.modalWindow{
+    width: 890px;
+    margin: 15px;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: calc(~'50% - 280px');
+    left: calc(~'50% - 455px');
+}
+.modalWindow__box{   //Контейнер для правой части окна с текстом
+    width: 388px;
+    padding: 0px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid @border;
+
+    #modalWindow__button_close{ //Кнопка закрыть модальное окно
+        cursor: pointer;
+        font-size: 8px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        background-color: @white;
+        border: 1.3px solid @text;
+        color: @pink;
+        margin: 70px 5px 0 5px;
+        padding: 5px 5px;
+        transition: background-color .5s;
+    
+        &:hover{
+            color: @text;
+        }
+    }
+    .modalWindow__title{ //Заголовок по заполнению логин/пароля
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+
+    .modalWindow__form, .modalWindow__text{ //Выравнивание по центру формы и текста
+        text-align: center;
+    }
+
+    .modalWindow__form_login, #modalWindow__form_password{ //Стилизация input для ввода логин/пароль
+        border: none;
+        text-align: center;
+        padding: 5px 0;
+        outline: none;
+    }
+
+    hr{ //Стилизация линии под логин/пароль
+        width: 210px;
+        margin: 0 0 8px 0;
+    }
+
+    .modalWindow__form_password{ //Обертка для блоков пароля и иконки eye
+        display: flex;
+        align-items: center;
+
+        #modalWindow__form_password{ //Расширение занимаемого пространства блока пароля - иконка отодвигается на конец контейнера
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+    }
+
+    #modalWindow__form_password_eye{
+        color: @pink;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .modalWindow__form_access{ //Стилизация кнопки "Войти"
+        margin-top: 17px;
+        width: 160px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 8px;
+        text-transform: uppercase;
+        background-color: @pink;
+        border: 1.3px solid @pink;
+        color: @white;
+        padding: 5px;
+        transition: background-color .5s;
+        
+        &:hover{
+            color: @pink;
+            background-color: @white;
+        }
+    }
+
+    .modalWindow__text p{ //Стилизация текста и ссылки под кнопкой "Войти"
+        color: @text;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 0 5px;
+
+        .modalWindow__text_link a{
+            color: @dark_grey;
+        }
+    }
+
+    .modalWindow__text_icons{
+        margin-top: 20px;
+        text-align: center;
+        
+        span{ //Обрамление иконок соц сетей
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            margin: 0 3px;
+            padding: 5px;
+            border: 2px solid @orange;
+
+        }
+
+        i{
+            color: @orange;
+            font-size: 14px;
+        }
+
+        #fc{ //Выравнивание окружности
+            padding: 0 4px;
+        }
+        #vk{ //Выравнивание окружности
+            padding: 0 1px;
+        }
+    }
+
+    .modalWindow__list{ //Размещение блока с цифрой 1 и списком чек-бокса
+        display: flex;
+        flex-direction: row;
+    }
+
+    .modalWindow__list_circle{ 
+        padding-top: 10px;
+
+        span{ //Стилизация блока с цифрой 1
+            font-size: 14px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            padding: 3px 7px;
+            color: @white;
+            background-color: @blue;
+            border: 2px solid @white;
+            box-shadow: 0 1px 3px @shadow;
+            margin-top: 20px;
+        }
+    }
+    
+    .modalWindow__list_li{
+        margin-top: 10px;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0 0 0 10px;
+    }
+    .modalWindow__list_li{ //Стилизация списка
+        li{
+            font-size: 7px;
+            list-style-type: none;
+            color: @text;
+            margin-top: 5px;
+        }
+
+        #choise{ //Скрытие стандартного вида чек-бокса
+            display: none;
+        }
+
+        label span{ //Стилизация нового вида чек-бокса
+            height: 6px;
+            width: 6px;
+            border: 1px solid @text;
+            display: inline-block;
+            position: relative;
+            float: left;
+            background-color: @white;
+            padding: 1px 2px 1px 1px;
+            margin: 2px 5px 2px 0;
+        }
+        [type=checkbox]:checked + span:before { //Изменение "галочки" для чек-бокса
+            content: '\2714';
+            position: absolute;
+            top: -9px;
+            font-size: 14px;
+            color: @text;
+        }
+>>>>>>> first commit
+    }
+}

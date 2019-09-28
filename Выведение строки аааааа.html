@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+        var par = +prompt("Введите число для функции");
+        var countLetter = function (par){
+            if(par > 0){
+                for(var i = 0; i < par; i++){
+                    arr.push("a");
+                }
+                return arr.join("");
+            }else{return false;}
+        }
+        alert(countLetter(par));
+    </script>
+</body>
+</html>

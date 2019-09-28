@@ -1,0 +1,86 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="list"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/fe091cc005.js"></script>
+</head>
+<body>
+    <div class="mainWindow">
+        <div class="mainWindow__logo"><img src="images/logo.jpg" alt=""></div>
+        <div class="mainWindow__button">
+            <button id="mainWindow__button_registration">Регистрация</button>
+            <button id="mainWindow__button_access">Войти</button> 
+        </div>
+    </div>
+    <div class="modalWindow">
+        <div class="modalWindow__pic"><img src="images/flower.jpg" alt=""></div>
+        <div class="modalWindow__box">
+            <div class="modalWindow__button">
+                <button id="modalWindow__button_close">Закрыть</button>
+            </div>
+            <div class="modalWindow__title">
+                <h2>Войти через электронную почту</h2>
+            </div>
+            <form method="post" class="modalWindow__form">
+                <input type="email" name="login" class="modalWindow__form_login" placeholder="Введите e-mail" autocomplete="on">
+                <hr>
+                <div class="modalWindow__form_password">
+                    <input type="password" name="password" id="modalWindow__form_password" placeholder="Введите пароль">
+                    <i id="modalWindow__form_password_eye" class="fa fa-eye"></i>
+                </div>
+                <hr>
+                <input type="submit" class="modalWindow__form_access" value="Войти">
+            </form>
+            <div class="modalWindow__text">
+                <p><a href="#" class="modalWindow__text_link">Восстановить пароль</a></p>
+                <p>Или авторизуйтесь с помощью социальных сетей</p>
+                <div class="modalWindow__text_icons">
+                    <span><a href="#"><i class="fa fa-facebook" id="fc"></i></a></span>
+                    <span><a href="#"><i class="fa fa-vk" id="vk"></i></a></span>
+                </div>
+            </div>
+            <div class="modalWindow__list">
+                <div class="modalWindow__list_circle"><span>1</span></div>
+                <div class="modalWindow__list_li">
+                    <ul>
+                        <li><label><input type="checkbox" id="choise" checked><span></span>Я согласен на получение информации от Talentsy<br>
+                        Изменить настройки</label></li>
+                            <ul>
+                                <li><label><input type="checkbox" id="choise" checked><span></span>Я хочу получать SMS-сообщения о мероприятиях и/или иных услугах Talentsy</label></li>
+                                <li><label><input type="checkbox" id="choise"><span></span>Я хочу получать электронные письма о мероприятиях и/или иных услугах Talentsy</label></li>
+                                <li><label><input type="checkbox" id="choise" checked><span></span>Я хочу получать звонки о мероприятиях и/или иных услугах Talentsy</label></li>
+                            </ul>
+                        <li><label><input type="checkbox" id="choise" checked><span></span>Нажимая на кнопку "Забронировать" я даю свое согласие на обработку персональных данных и соглашаюсь с условиями договора оферы и политикой конфиденциальности</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+>>>>>>> first commit
