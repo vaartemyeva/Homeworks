@@ -77,7 +77,7 @@ function hideList() {
     box.style.height = "0px"; 
     box.style.transition = "height 0.5s ease"; 
 
-    //div.innerHTML = "";
+    div.innerHTML = "";
 }
 
 var show = true;
