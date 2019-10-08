@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/jquery.rotate.js"></script>
+</head>
+<body>
+    <div class="welcome">
+        <div>
+            <h2>Хотите поиграть в трансформацию?</h2>
+        </div>
+        <div class="welcome_buttons">
+            <button id="btn_yes" title="Чудесно">Да, конечно!</button>
+            <button id="btn_no" title="Стесняшка">Нет, я стесняюсь...</button>
+        </div>
+    </div>
+    <div class="preview">
+        <p id="p1">У нас есть интересный шкаф с изотопами радия и полония,<br> 
+            а также завалялись пару супер-героев c предыдущих перфомансов</p>
+        <p id="p2">Хотите опробовать чудеса науки и превратить кого-нибудь в женщину?</p>
+        <p id="p3">Можете не отвечать! И так понятно, что да. Иначе Вы бы не тратили время в интернете...</p>
+        <p id="p4">Резиновая кукла уже наскучила, да?</p>
+        <div class="start_button">
+            <button id="btn_start">Дерзай!</button>
+        </div>
+    </div>
+    <div id="main">
+        <div id="trans">
+            <img id="shake" src="images/transform.jpg" alt="">
+        </div>
+        <div class="choose">
+            <button id="btn_choose">Выберите жертву</button>
+            <div id="toShow"> 
+                <div id="pick_1"><img src="images/joker.jpg" alt="" title="Spicy gay"></div>
+                <div id="pick_2"><img src="images/batman.jpg" alt="" title="Tedious gay"></div>
+                <div id="pick_3"><img src="images/spider.png" alt="" title="Lovely gay"></div>
+                <div id="pick_4"><img src="images/rambo.png" alt="" title="Creepy gay"></div>
+            </div>
+        </div>
+    </div>
+    <div id="accept_button">
+        <button id="btn_accept">Продолжить?</button>
+    </div>
+    <script src="script_heroes.js"></script>
+</body>
+</html>
+
+
