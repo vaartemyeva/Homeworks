@@ -1,0 +1,52 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #0e0e0e;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 12px;
+}
+* {
+  box-sizing: border-box;
+}
+table {
+  margin: 0 auto;
+  width: 660px;
+  align-self: center;
+  background: radial-gradient(50% 50%, white, #def0fa);
+  color: #001c39;
+  line-height: 1.1;
+  border-collapse: collapse;
+}
+table td {
+  border: 1px solid #8be3cc;
+  padding: 5px 7px;
+}
+table caption {
+  background-color: #f6f2f8;
+  padding: 10px;
+  color: #ffce00;
+  text-align: center;
+  font-weight: 700;
+  font-family: annabelle, cursive;
+  text-shadow: 1px 1px 1px #a7bab9;
+  font-size: 30px;
+  border: 1px solid #f6f2f8;
+}
+table caption:before,
+table caption:after {
+  content: "\274B";
+  color: #8be3cc;
+  text-shadow: 1px 1px 1px #a7bab9;
+  margin: 10px;
+}
+table .main,
+table .title {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: start;
+}
+table .title {
+  text-align: center;
+  padding: 10px;
+}
